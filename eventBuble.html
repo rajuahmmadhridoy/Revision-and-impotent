@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <ul id="itemList">
+            <li id="first" class="item">lorem1</li>
+            <li class="item">lorem2</li>
+            <li class="item">lorem3</li>
+            <li class="item">lorem4</li>
+            <li class="item itemLast">lorem5</li>
+        </ul>
+    </div>
+    <script>
+        // module 18 ar 10 ,11 video 
+        document.getElementById('container').addEventListener('click', function(){
+            console.log('container')
+            // event.stopImmediatePropagation()
+        })
+        document.getElementById('itemList').addEventListener('click', function(){
+            console.log('item')
+            // event.stopImmediatePropagation()
+            event.stopPropagation()
+        })
+        document.getElementById('first').addEventListener('click', function(){
+            console.log('first')
+            // event.stopPropagation()
+        })
+        // document.getElementsByClassName('itemLast')[0].addEventListener('click', function(){
+        //     console.log('hey')
+        // })
+        // document.querySelector('.itemLast').addEventListener('click', function(){
+        //     console.log('hey')
+        // })
+        console.log(document.getElementsByClassName('itemLast'))
+    </script>
+</body>
+</html>

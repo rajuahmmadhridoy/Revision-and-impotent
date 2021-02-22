@@ -1,0 +1,179 @@
+1, function
+2, Arrow function
+3, String
+4, speed operetor , concatenate multiLine multiple Array, arrau ,max 
+5, class
+6, Inheritance , extends class , super method
+7, Destructure
+
+
+/*******************************
+        1,function
+*******************************/
+
+// function all note
+// Function এ যদি দুইটা value  recive করে কিন্তু function call করছে একটি value দিয়ে তখন error ঠিক করতে হলে ২ য় যে recive করবে তাকে কিছু কাজ করে নিতে হবে
+function add(num1, num2){
+    num2 = Number  || 0 //akhane ami 0 disi akhane jekono value deya jabe jeta amar dorkar jodi value na pai tahole undefined dekhabe
+    return num1 + num2;
+}
+or 
+  function add(num1, num2 = 20){
+      return num1 + num2;
+  }
+
+  const total = add(10)
+
+/*******************************
+        2, Arrow function
+*******************************/
+  
+  * veriable use kore function
+  
+  const doubleIt = function muFun(num){
+      return num * 5;
+  }
+
+  * Arrow function use veryable
+   const doubleIt = nums => num * 2;
+
+  * Arrow 2+ input hole 
+  const add = (x, y) => x + y;
+  
+  *const give5 = () => 5;
+
+  * Arrow multiline hole
+  const arrrowMultiline = (x,y,z) =>{
+      return x + y + z;
+  }
+
+/*******************************
+            3, String
+*******************************/
+  
+  const firstName = 'raju';
+  const lastName = 'Hridoy';
+  const fullName = firstName + " " + lastName + " " is a good cele;
+  or
+   const fullName2 = `${firstName} ${lastName} ${10+20+30} is a good cele`
+
+   const multiLine = "I love you\n"
+   +"I miss you\n"
+   +"I need you\n"
+
+   const multiLine2 = `I love you
+        I miss you
+        No i need you
+   `
+   console.log()
+
+
+   /*******************************
+4, spread operetor , concatenate multiLine multiple Array, arrau ,max 
+*******************************/
+
+const ages = [11, 12, 13, 14, 15, 16]
+const ages2 = [17, 18, 19, 20]
+const ages3 = [18, 19, 20, 21]
+
+### using concat akadik array ke ak sathe ana
+const allAges = ages.concat(ages2).concat(ages2).concat([5]).concat(ages3)
+
+### using speed operetor last a 10 add kore disi
+const allAges2 = [...ages,...ages2,...ages3,10]
+
+### Array max
+const business = 650;
+const minister = 450;
+const sochib = 250;
+const maximum = Math.max(business,minister,sochib)
+
+### use soread operator
+const takaPoisha = [650, 450, 250]
+const maximum = Math.max(...takaPoisha);
+
+
+
+   /*******************************
+            5, class
+*******************************/
+class, constructor, create object from class
+
+class Student{
+    constructor(sId, sName){
+        this.id = sId;
+        this.name = sName;
+        this.scholl = "amar school";
+    }
+}
+
+const student1 = new Student(12, "raju ahmmad")
+const student2 = new Student(1, "meheraj")
+
+
+
+/*******************************
+6, Inheritance , extends class , super method
+*******************************/
+
+class parent{
+    constructor(){
+        this.fatherName = "School Name"
+    }
+}
+
+class child extends parent{
+    constructor(sId, sName){
+        super()
+        this.id = sId;
+        this.name = sName;
+        this.scholl = "amar school";
+    }
+}
+
+const baby1 = new Student(12, "raju ahmmad")
+const baby2 = new Student(1, "meheraj")
+
+
+#####################################
+### jodi class a function use 
+
+class parent{
+    constructor(){
+        this.fatherName = "School Name"
+    }
+}
+
+class child extends parent{
+    constructor(sId, sName){
+        super()
+        this.id = sId;
+        this.name = sName;
+        this.scholl = "amar school";
+        getFullName(){
+            return this.name + " " + this.fatherName;
+        }
+    }
+}
+
+const baby1 = new Student(12, "raju ahmmad")
+const baby2 = new Student(1, "meheraj")
+
+
+
+/*******************************
+       7, Destructure
+*******************************/
+#### useing object
+
+const person = {name:"raju ahmmad", age: 17, job:"facebook",address:"noakhali",
+phone: '01879028959', friends:['meheraj','nabil'] }
+const {phone, friends,name, age} = person;
+console.log(phone)
+// const gfName = person.friends;
+// const phone1 = person.phone;
+
+#### useing array
+const friends = ['Meheraj','nabil','tareq','omar','masum']
+const [first,second,thaird,...ses] = friends;
+
